@@ -1,6 +1,7 @@
 import React from "react";
 import { useActions } from "../../../hooks/useActions";
 import { FaTimes, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import "./TableRow.css";
 
 const TableRow = ({ id, name, value, index, isFirstRow, isLastRow }) => {
   const { deleteRow, editRow, changeRows } = useActions();
@@ -9,7 +10,7 @@ const TableRow = ({ id, name, value, index, isFirstRow, isLastRow }) => {
     <tr>
       <td>
         <input
-          className="text-center"
+          className="tableInput"
           name={"name" + id}
           type="text"
           value={name}
@@ -20,7 +21,7 @@ const TableRow = ({ id, name, value, index, isFirstRow, isLastRow }) => {
       </td>
       <td>
         <input
-          className="text-center"
+          className="tableInput"
           name={"value" + id}
           type="text"
           value={value}
